@@ -26,4 +26,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('home/', views.home, name='home'),
     path('store/', include('store.urls')), # se agregan las url de store.urls bajo un path global, este path comenzara con store/:
+    path('carts/', include('carts.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
